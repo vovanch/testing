@@ -9,7 +9,10 @@ let personalMovieDB = {
 	privat: false
 };
 let lastFilm, rateFilm;
-for (let i = 0; i < numberOfFilms; i++) {
+//for (let i = 0; i < numberOfFilms; i++) {
+let i=0;
+do {
+		
 	
 	lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
 	rateFilm = +prompt("На сколько оцените его?", "");
@@ -18,7 +21,9 @@ for (let i = 0; i < numberOfFilms; i++) {
 	}
 	else {
 		i--; }
+	i++;
 }
+while (i<numberOfFilms);
 if (personalMovieDB.count < 10) {
 	alert("Просмотрено довольно мало фильмов");
 } 
