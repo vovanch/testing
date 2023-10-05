@@ -1,5 +1,5 @@
 let numberOfFilms;
-numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+numberOfFilms = +prompt("Скільки фільмів ви вже передивились?", "");
 
 let personalMovieDB = {
 	count: numberOfFilms,
@@ -14,8 +14,8 @@ let i=0;
 do {
 		
 	
-	lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
-	rateFilm = +prompt("На сколько оцените его?", "");
+	lastFilm = prompt("Один із останніх переглянутих фільмів?", ""),
+	rateFilm = +prompt("На скільки оціните його?", "");
 	if (lastFilm != "" && rateFilm != "" && lastFilm !=null && rateFilm != null && lastFilm.length < 10 && rateFilm <5) {
 		personalMovieDB.movies[lastFilm] = rateFilm;
 	}
@@ -25,18 +25,18 @@ do {
 }
 while (i<numberOfFilms);
 if (personalMovieDB.count < 10) {
-	alert("Просмотрено довольно мало фильмов");
+	alert("Переглянуто доволі мало фільмів!");
 } 
 else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30)
 {
-	alert("Вы классический зритель.");
+	alert("Ви класичний глядач.");
 }
 else if (personalMovieDB.count >= 30)
 {
-	alert("Вы киноман");
+	alert("Ви кіноман!!!");
 }
 else {
-	alert("Произошла ошибка");
+	alert("Виникла помилка!");
 }
 console.log(personalMovieDB);
 
