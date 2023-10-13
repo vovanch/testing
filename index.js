@@ -24,7 +24,7 @@ showMyDB(personalMovieDB.privat);
 function rememberMyFilms() {
 	let i=0;
 	do {
-		lastFilm = prompt("Один із останніх переглянутих фільмів?", ""),
+		lastFilm = prompt("Один із останніх переглянутих фільмів?", "").trim(),
 		rateFilm = +prompt("На скільки оціните його?", "");
 		if (lastFilm != "" && rateFilm != "" && lastFilm !=null && rateFilm != null && lastFilm.length < 10 && rateFilm <5) {
 			personalMovieDB.movies[lastFilm] = rateFilm;
